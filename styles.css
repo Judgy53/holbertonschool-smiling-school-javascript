@@ -12,6 +12,8 @@
   --popular-arrows-x: -6vw;
   --smile-p-margin: 20px;
   --check-color: #82d24f;
+  --loader-color: #f3f3f3;
+  --loader-background-color: var(--main-color);
 
   --faq-pad-inner: 8vw;
   --faq-pad-outer: 7vw;
@@ -899,4 +901,25 @@
   .results .card {
     width: 90vw;
   }
+}
+
+/* Loader */
+.loader {
+  border: 10px solid var(--loader-color);
+  border-top: 10px solid var(--loader-background-color);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.loader.inverted {
+  border-color: var(--loader-background-color);
+  border-top-color: var(--loader-color);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
