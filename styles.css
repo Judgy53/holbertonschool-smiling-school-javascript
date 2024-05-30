@@ -9,7 +9,7 @@
   --nav-line-height: 2px;
   --pros-padding: 62px;
   --quotes-arrows-pad: 300px;
-  --popular-arrows-x: -6vw;
+  --carousel-arrows-x: -3vw;
   --smile-p-margin: 20px;
   --check-color: #82d24f;
   --loader-color: #f3f3f3;
@@ -297,13 +297,13 @@
   color: var(--background-color);
 }
 
+.popular {
+  padding-bottom: 50px;
+}
+
 .section .card {
   border: 0;
   width: 16rem;
-}
-
-.popular .card {
-  padding-bottom: 87px;
 }
 
 .section .card-img-overlay {
@@ -327,26 +327,20 @@
 }
 
 .popular .carousel-control-prev.arrow-left {
-  left: var(--popular-arrows-x);
+  left: var(--carousel-arrows-x);
 }
 
 .popular .carousel-control-next.arrow-right {
-  right: var(--popular-arrows-x);
+  right: var(--carousel-arrows-x);
 }
 
 @media screen and (max-width: 1280px) {
-  :root {
-    --popular-arrows-x: -4vw;
-  }
   .section .card {
     width: 19vw;
   }
 }
 
 @media screen and (max-width: 1150px) {
-  :root {
-    --popular-arrows-x: -3vw;
-  }
   .section .card-img-overlay {
     /* top: 25px; */
     top: 4%;
@@ -357,10 +351,6 @@
 }
 
 @media screen and (max-width: 991px) {
-  :root {
-    --popular-arrows-x: -3vw;
-  }
-
   .section .card {
     width: 16rem;
   }
@@ -374,9 +364,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  :root {
-    --popular-arrows-x: -6vw;
-  }
   .section .card {
     width: 16rem;
   }
@@ -384,7 +371,7 @@
 
 @media screen and (max-width: 575px) {
   :root {
-    --popular-arrows-x: -15px;
+    --carousel-arrows-x: -15px;
   }
   .section .card-img-overlay img {
     width: 30%;
@@ -927,6 +914,20 @@
 
 /* Slick overrides */
 
-section.popular .slick-slide img {
+section.popular .slick-slide img,
+section.videos .slick-slide img {
   display: inline;
+}
+
+.carousel-slick .slick-arrow {
+  cursor: pointer;
+}
+
+/* Section videos */
+section.videos {
+  padding: 50px 0;
+}
+
+section.videos .section-header {
+  padding-bottom: 50px;
 }
