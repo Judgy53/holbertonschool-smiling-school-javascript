@@ -904,6 +904,7 @@
 }
 
 /* Loader */
+
 .loader {
   border: 10px solid var(--loader-color);
   border-top: 10px solid var(--loader-background-color);
@@ -922,4 +923,10 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Slick overrides */
+
+section.popular .slick-slide img {
+  display: inline;
 }
